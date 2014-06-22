@@ -1,0 +1,8 @@
+language:
+    - cpp
+
+script:
+    - which clang++
+    - clang++ --version
+    - clang++ -std=c++11 -fsanitize=memory -g -O0 -fno-omit-frame-pointer foo.cpp -o prog
+    - ./prog
